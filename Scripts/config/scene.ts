@@ -2,6 +2,11 @@ module config {
   export enum Scene {
     START,
     PLAY,
-    OVER
+    OVER,
+    LEVELS,
+    LEVEL1,
+    LEVEL2,
+    LEVEL3,
+    NEXTLEVEL
   }
 }

@@ -21,7 +21,7 @@ var scenes;
         }
         // Private Mathods
         StartScene.prototype._startButtonClick = function () {
-            managers.Game.currentScene = config.Scene.PLAY;
+            managers.Game.currentScene = config.Scene.LEVELS;
         };
         StartScene.prototype._helpButtonClick = function () {
             managers.Game.currentScene = config.Scene.PLAY;

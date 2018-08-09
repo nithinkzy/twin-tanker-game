@@ -52,19 +52,23 @@
       [405, 197, 62, 63, 0, 0, 0],
       [2, 264, 200, 60, 0, 0, 0],
       [204, 264, 200, 60, 0, 0, 0],
-      [406, 264, 65, 65, 0, 0, 0],
-      [2, 331, 65, 65, 0, 0, 0],
-      [69, 331, 65, 65, 0, 0, 0],
-      [136, 331, 65, 65, 0, 0, 0],
-      [203, 331, 32, 32, 0, 0, 0],
-      [237, 331, 32, 32, 0, 0, 0],
-      [271, 331, 32, 32, 0, 0, 0],
-      [305, 331, 32, 32, 0, 0, 0],
-      [339, 331, 32, 32, 0, 0, 0],
-      [373, 331, 32, 32, 0, 0, 0],
-      [2, 398, 200, 60, 0, 0, 0],
-      [204, 398, 200, 60, 0, 0, 0]
+      [2, 326, 200, 60, 0, 0, 0],
+      [204, 326, 200, 60, 0, 0, 0],
+      [2, 388, 200, 60, 0, 0, 0],
+      [204, 388, 65, 65, 0, 0, 0],
+      [271, 388, 65, 65, 0, 0, 0],
+      [338, 388, 65, 65, 0, 0, 0],
+      [405, 388, 65, 65, 0, 0, 0],
+      [472, 388, 32, 32, 0, 0, 0],
+      [2, 455, 32, 32, 0, 0, 0],
+      [36, 455, 32, 32, 0, 0, 0],
+      [70, 455, 32, 32, 0, 0, 0],
+      [104, 455, 32, 32, 0, 0, 0],
+      [138, 455, 32, 32, 0, 0, 0],
+      [172, 455, 200, 60, 0, 0, 0],
+      [2, 517, 200, 60, 0, 0, 0]
   ],
+  
 
   "animations": {
     "bullet": { "frames": [0] },
@@ -90,16 +94,19 @@
     "island": {
        "frames": [24]
        },
-    "menuButton": { "frames": [25] },
-    "nextLevelButton": { "frames": [26] },
-    "plane1": { "frames": [27] },
-    "plane2": { "frames": [28] },
-    "planeflash": { "frames": [29,30] },
+       "levelOneButton": { "frames": [25] },
+       "levelThreeButton": { "frames": [26] },
+       "levelTwoButton": { "frames": [27] },
+    "menuButton": { "frames": [28] },
+    "nextLevelButton": { "frames": [29] },
+    "plane1": { "frames": [30] },
+    "plane2": { "frames": [31] },
+    "planeflash": { "frames": [32,33] },
     
-    "smallexplosion": { "frames": [31,32,33,34,35,36] },
+    "smallexplosion": { "frames": [34,35,36,37,38,39] },
    
-    "startButton": { "frames": [37] },
-    "tryAgainButton": { "frames": [38] }
+    "startButton": { "frames": [40] },
+    "tryAgainButton": { "frames": [41] }
 },
 
   };
@@ -182,6 +189,22 @@
       case config.Scene.OVER:
         currentScene = new scenes.OverScene();
         break;
+        case config.Scene.LEVELS:
+        currentScene = new scenes.LevelScene();
+        break;
+        case config.Scene.LEVEL1:
+        currentScene = new scenes.LevelOne();
+        break;
+        case config.Scene.LEVEL2:
+        currentScene = new scenes.LevelTwo();
+        break;
+        case config.Scene.LEVEL3:
+        currentScene = new scenes.LevelThree();
+        break;
+        case config.Scene.NEXTLEVEL:
+        currentScene = new scenes.NextLevel();
+        break;
+
     }
 
     currentState = managers.Game.currentScene;
