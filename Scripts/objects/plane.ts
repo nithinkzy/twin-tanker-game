@@ -8,7 +8,7 @@ module objects {
 
     // Constructor
     constructor() {
-      super("plane");
+      super("plane1");
       this.Start();
     }
 
@@ -34,7 +34,7 @@ module objects {
     }
 
     // updates the game object every frame
-    public Update():void {
+    public Update():void {      
       this.Move();
       this.CheckBounds();
       this.BulletFire();
@@ -53,21 +53,21 @@ module objects {
      // keyboard controls
      if(managers.Game.keyboardManager.moveForward) {
        this.rotation = 0;
-             this.y -= 5;
+             this.y -= 2;
     }
 
     if(managers.Game.keyboardManager.moveBackward) {
       this.rotation = 180;
-      this.y += 5;
+      this.y += 2;
     }
     if(managers.Game.keyboardManager.moveLeft) {
       this.rotation=-90;
-     this.x -= 10;
+     this.x -= 2;
    }
 
    if(managers.Game.keyboardManager.moveRight) {
      this.rotation = 90;
-     this.x += 5;
+     this.x += 2;
    }
     
 

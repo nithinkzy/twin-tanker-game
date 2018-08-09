@@ -3,6 +3,7 @@ module scenes {
     // Private Instance Variables
     private _ocean: objects.Ocean;
     private _plane: objects.Plane;
+    private _tankeOne: objects.tankOne;
     private _island: objects.Island;
     private _clouds: objects.Cloud[];
     private _cloudNum: number;
@@ -33,6 +34,9 @@ module scenes {
       this._ocean = new objects.Ocean();
       this._plane = new objects.Plane();
       managers.Game.plane = this._plane;
+
+      this._tankeOne = new objects.tankOne();
+     
 
       // make a reference to the bullet manager in the game manager
       this._bulletManager = new managers.Bullet();
@@ -69,6 +73,7 @@ module scenes {
 
       this._ocean.Update();
       this._plane.Update();
+      this._tankeOne.Update();
 
       this._enemy.Update();
 
@@ -111,7 +116,7 @@ module scenes {
 
       // add the coin to the scene
       this.addChild(this._coin);
-
+      this.addChild(this._tankeOne);
       // add the plane to the scene
       this.addChild(this._plane);
       this.addChild(this._plane.planeFlash); // add the plane flashing effect

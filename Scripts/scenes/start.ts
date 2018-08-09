@@ -3,6 +3,8 @@ module scenes {
     // Private Instance Variables
     private _welcomeLabel: objects.Label;
     private _startButton: objects.Button;
+    private _helpButton: objects.Button;
+    private _exitButton: objects.Button;
     private _ocean: objects.Ocean;
 
 
@@ -19,6 +21,12 @@ module scenes {
     private _startButtonClick():void {
       managers.Game.currentScene = config.Scene.PLAY;
     }
+    private _helpButtonClick():void {
+      managers.Game.currentScene = config.Scene.PLAY;
+    }
+    private _exitButtonClick():void {
+     window.close();
+    }
 
 
     // Public Methods
@@ -29,8 +37,10 @@ module scenes {
 
       this._ocean = new objects.Ocean();
 
-      this._welcomeLabel = new objects.Label("Mail Pilot", "60px", "Dock51", "#FFFF00", 320, 240, true);
-      this._startButton = new objects.Button("startButton", 320, 340);
+      this._welcomeLabel = new objects.Label("Mail Pilot", "60px", "Dock51", "#FFFF00", 320, 120, true);
+      this._startButton = new objects.Button("startButton", 320, 220);
+      this._helpButton = new objects.Button("helpButton", 320, 290);
+      this._exitButton = new objects.Button("exitButton", 320, 360);
       this.Main();
     }
 
@@ -49,7 +59,15 @@ module scenes {
       // add the startButton to the scene
        this.addChild(this._startButton);
 
+       // add the helpButton to the scene
+       this.addChild(this._helpButton);
+
+       // add the exitButton to the scene
+       this.addChild(this._exitButton);
+
        this._startButton.on("click", this._startButtonClick);
+       this._helpButton.on("click", this._helpButtonClick);
+       this._exitButton.on("click", this._exitButtonClick);
     }
   }
 }

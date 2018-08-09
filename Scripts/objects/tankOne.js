@@ -10,16 +10,16 @@ var __extends = (this && this.__extends) || (function () {
 })();
 var objects;
 (function (objects) {
-    var Plane = /** @class */ (function (_super) {
-        __extends(Plane, _super);
+    var tankOne = /** @class */ (function (_super) {
+        __extends(tankOne, _super);
         // Constructor
-        function Plane() {
-            var _this = _super.call(this, "plane1") || this;
+        function tankOne() {
+            var _this = _super.call(this, "plane2") || this;
             _this.Start();
             return _this;
         }
         // private methods
-        Plane.prototype._animationEnded = function () {
+        tankOne.prototype._animationEnded = function () {
             if (this.alpha == 0) {
                 this.alpha = 1;
                 this.planeFlash.alpha = 0;
@@ -27,41 +27,41 @@ var objects;
         };
         // public methods
         // Initializes variables and creates new objects
-        Plane.prototype.Start = function () {
+        tankOne.prototype.Start = function () {
             this.planeFlash = new objects.PlaneFlash();
             this.planeFlash.alpha = 1;
             this.planeFlash.on("animationend", this._animationEnded.bind(this), false);
-            this.x = 320;
+            this.x = 270;
             this.y = 430;
             this._bulletSpawn = new math.Vec2();
         };
         // updates the game object every frame
-        Plane.prototype.Update = function () {
+        tankOne.prototype.Update = function () {
             this.Move();
             this.CheckBounds();
             this.BulletFire();
         };
         // reset the objects location to some value
-        Plane.prototype.Reset = function () {
+        tankOne.prototype.Reset = function () {
         };
         // move the object to some new location
-        Plane.prototype.Move = function () {
+        tankOne.prototype.Move = function () {
             // mouse controls
             // this.x = objects.Game.stage.mouseX;
             // keyboard controls
-            if (managers.Game.keyboardManager.moveForward) {
+            if (managers.Game.keyboardManager.moveForward1) {
                 this.rotation = 0;
                 this.y -= 2;
             }
-            if (managers.Game.keyboardManager.moveBackward) {
+            if (managers.Game.keyboardManager.moveBackward1) {
                 this.rotation = 180;
                 this.y += 2;
             }
-            if (managers.Game.keyboardManager.moveLeft) {
+            if (managers.Game.keyboardManager.moveLeft1) {
                 this.rotation = -90;
                 this.x -= 2;
             }
-            if (managers.Game.keyboardManager.moveRight) {
+            if (managers.Game.keyboardManager.moveRight1) {
                 this.rotation = 90;
                 this.x += 2;
             }
@@ -69,7 +69,7 @@ var objects;
             this.planeFlash.y = this.y;
         };
         // check to see if some boundary has been passed
-        Plane.prototype.CheckBounds = function () {
+        tankOne.prototype.CheckBounds = function () {
             // right boundary
             // right boundary
             if (this.x >= 640 - this.halfWidth) {
@@ -87,7 +87,7 @@ var objects;
                 this.y = this.halfWidth;
             }
         };
-        Plane.prototype.BulletFire = function () {
+        tankOne.prototype.BulletFire = function () {
             // check if Plane is "alive"
             if (this.alpha = 1) {
                 var ticker = createjs.Ticker.getTicks();
@@ -105,8 +105,8 @@ var objects;
                 }
             }
         };
-        return Plane;
+        return tankOne;
     }(objects.GameObject));
-    objects.Plane = Plane;
+    objects.tankOne = tankOne;
 })(objects || (objects = {}));
-//# sourceMappingURL=plane.js.map
+//# sourceMappingURL=tankOne.js.map

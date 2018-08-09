@@ -1,57 +1,126 @@
 module objects {
   export class Enemy extends objects.GameObject {
-    // private instance variables
+ // private instance variables
+ private _bulletSpawn:math.Vec2;
 
-    // public properties
+ // public properties
+ public planeFlash: objects.PlaneFlash;
 
-    // Constructor
-    constructor() {
-      super("enemy");
-      this.Start();
-    }
+ // Constructor
+ constructor() {
+   super("enemy");
+   this.Start();
+ }
 
-    // private methods
+ // private methods
+ private _animationEnded():void {
+   if(this.alpha == 0) {
+     this.alpha = 1;
+     this.planeFlash.alpha = 0;
+   }
+ }
 
-    // public methods
+ // public methods
 
-    // Initializes variables and creates new objects
-    public Start():void {
-     // this.x = 10;
-      //this.y = 10;
-      this._dy = 10;
-      this.Reset();
-    }
+ // Initializes variables and creates new objects
+ public Start():void {
+   this.planeFlash = new objects.PlaneFlash();
+   this.planeFlash.alpha = 1;
+   this.planeFlash.on("animationend", this._animationEnded.bind(this), false );
 
-    // updates the game object every frame
-    public Update():void {
-      this.Move();
-      this.CheckBounds();
-    }
+   this.x = 100;
+   this.y = 200;
+   this._bulletSpawn = new math.Vec2();
+ }
 
-    // reset the objects location to some value
-    public Reset():void {
-      this.x = 80;
-      //Math.floor((Math.random() * (640 - this.width)) + this.halfWidth);
-      this.y = 80;
-      this.alpha = 0;
-    }
+ // updates the game object every frame
+ public Update():void {
+   this.Move();
+   this.CheckBounds();
+   this.BulletFire();
+ }
 
-    // move the object to some new location
-    public Move():void {
-      this.y += this._dy;
-    }
+ // reset the objects location to some value
+ public Reset():void {
 
-    // check to see if some boundary has been passed
-    public CheckBounds():void {
-      // turn enemy back on when it appears on the screen
-      if((this.y >= 0) && (this.alpha == 0)) {
-        this.alpha = 1;
-      }
+ }
 
-      // check lower bounds
-      if(this.y >= 480 + this.height) {
-        this.Reset();
-      }
-    }
+ // move the object to some new location
+ public Move():void {
+  // mouse controls
+  // this.x = objects.Game.stage.mouseX;
+  // keyboard controls
+  let x = Math.floor((Math.random() * (640 - this.width)) + this.halfWidth);
+  let direction = Math.floor((Math.random() * 4) + 1);
+  let length = Math.floor((Math.random() * 100) + 1);
+  let ticker:number = createjs.Ticker.getTicks();
+  switch(direction)
+  {
+    case 1:
+    if(ticker%10==0)
+     this.y-=length;
+     break;
+     case 2:
+     if(ticker%10==0)
+     this.y+=length;
+     break;
+     case 3:
+     if(ticker%10==0)
+     this.x-=length;
+     break;
+     case 4:
+     if(ticker%10==0)
+     this.x+=length;
+     break;
+
+
+
   }
+  
+  this.planeFlash.x = this.x;
+  this.planeFlash.y = this.y;
+
+ }
+
+ // check to see if some boundary has been passed
+ public CheckBounds():void {
+   // right boundary
+  // right boundary
+  if(this.x >= 640 - this.halfWidth) {
+   this.x = 640 - this.halfWidth;
+ }
+
+ // left boundary
+ if(this.x <= this.halfWidth) {
+   this.x = this.halfWidth;
+ }
+ if(this.y >= 480 - this.halfWidth) {
+   this.y = 480 - this.halfWidth;
+ }
+
+ // left boundary
+ if(this.y <= this.halfWidth) {
+   this.y = this.halfWidth;
+ }
+}
+
+ public BulletFire():void {
+   // check if Plane is "alive"
+   if(this.alpha = 1) {
+     let ticker:number = createjs.Ticker.getTicks();
+     if((managers.Game.keyboardManager.fire) && (ticker % 10 == 0)) {
+       this._bulletSpawn = new math.Vec2(this.x, this.y - this. halfHeight);
+       let currentBullet = managers.Game.bulletManger.CurrentBullet;
+       let bullet = managers.Game.bulletManger.Bullets[currentBullet];
+       bullet.x = this._bulletSpawn.x;
+       bullet.y = this._bulletSpawn.y;
+       managers.Game.bulletManger.CurrentBullet++;
+       if(managers.Game.bulletManger.CurrentBullet > 49) {
+         managers.Game.bulletManger.CurrentBullet = 0;
+       }
+       createjs.Sound.play("bulletSound");
+     }
+   }
+ }
+}
 }

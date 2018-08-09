@@ -26,6 +26,7 @@ var scenes;
             this._ocean = new objects.Ocean();
             this._plane = new objects.Plane();
             managers.Game.plane = this._plane;
+            this._tankeOne = new objects.tankOne();
             // make a reference to the bullet manager in the game manager
             this._bulletManager = new managers.Bullet();
             managers.Game.bulletManger = this._bulletManager;
@@ -54,6 +55,7 @@ var scenes;
             var _this = this;
             this._ocean.Update();
             this._plane.Update();
+            this._tankeOne.Update();
             this._enemy.Update();
             this._bulletManager.Update();
             this._coin.x = this._island.x;
@@ -85,6 +87,7 @@ var scenes;
             this.addChild(this._island);
             // add the coin to the scene
             this.addChild(this._coin);
+            this.addChild(this._tankeOne);
             // add the plane to the scene
             this.addChild(this._plane);
             this.addChild(this._plane.planeFlash); // add the plane flashing effect
