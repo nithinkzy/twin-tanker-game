@@ -23,12 +23,16 @@ var scenes;
         OverScene.prototype._restartButtonClick = function () {
             managers.Game.currentScene = config.Scene.PLAY;
         };
+        OverScene.prototype._menuButtonClick = function () {
+            managers.Game.currentScene = config.Scene.START;
+        };
         // Public Methods
         // Initialize Game Variables and objects
         OverScene.prototype.Start = function () {
             this._ocean = new objects.Ocean();
-            this._overLabel = new objects.Label("Game Over", "60px", "Dock51", "#FFFF00", 320, 140, true);
-            this._restartButton = new objects.Button("tryAgainButton", 320, 340);
+            this._overLabel = new objects.Label("Game Over", "60px", "Dock51", "#FFFF00", 320, 60, true);
+            this._restartButton = new objects.Button("tryAgainButton", 320, 290);
+            this._menuButton = new objects.Button("menuButton", 320, 360);
             this._scoreboard = new managers.ScoreBoard();
             this.Main();
         };
@@ -43,11 +47,14 @@ var scenes;
             this.addChild(this._overLabel);
             // add the backButton to the scene
             this.addChild(this._restartButton);
+            // add the menu button to the scene
+            this.addChild(this._menuButton);
             // add scoreboard to the scene
             this.addChild(this._scoreboard.HighScoreLabel);
             this._scoreboard.HighScore = managers.Game.HighScore;
             // event listeners
             this._restartButton.on("click", this._restartButtonClick);
+            this._menuButton.on("click", this._menuButtonClick);
         };
         return OverScene;
     }(objects.Scene));
