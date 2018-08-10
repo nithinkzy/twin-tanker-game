@@ -6,13 +6,31 @@ module objects {
     // public properties
 
     // Constructor
-    constructor() {
-      if (managers.Game.HighScore> 100)
+    constructor(number) {
+      console.log(number);
+      if (number== 1)
       {
         super(managers.Game.assetManager.getResult("ocean"));
+        this.Start();
+
       }
-      super(managers.Game.assetManager.getResult("level2"));
+      else if ( number == 2)
+      {
+        super(managers.Game.assetManager.getResult("level2"));
+        this.Start();
+        console.log("level 2");
+      }
+    else if( number ==3)
+    {
+      super(managers.Game.assetManager.getResult("level3"));
       this.Start();
+    }
+    else
+    {
+      super(managers.Game.assetManager.getResult("ocean"));
+        this.Start();
+    }
+      
     }
 
     // private methods

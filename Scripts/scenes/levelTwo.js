@@ -23,7 +23,7 @@ var scenes;
         // Public Methods
         // Initialize Game Variables and objects
         LevelTwo.prototype.Start = function () {
-            this._ocean = new objects.Ocean();
+            this._ocean = new objects.Ocean(2);
             this._plane = new objects.Plane();
             managers.Game.plane = this._plane;
             this._tankeOne = new objects.tankOne();

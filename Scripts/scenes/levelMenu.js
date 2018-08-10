@@ -38,7 +38,7 @@ var scenes;
         };
         // Initialize Game Variables and objects
         LevelScene.prototype.Start = function () {
-            this._ocean = new objects.Ocean();
+            this._ocean = new objects.Ocean(0);
             this._welcomeLabel = new objects.Label("LEVELS", "60px", "Consolas", "#FAEFFF", 320, 50, true);
             this._levelOneButton = new objects.Button("levelOneButton", 320, 160);
             this._levelTwoButton = new objects.Button("levelTwoButton", 320, 230);

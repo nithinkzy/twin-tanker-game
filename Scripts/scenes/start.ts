@@ -35,7 +35,7 @@ module scenes {
     public Start(): void {
 
 
-      this._ocean = new objects.Ocean();
+      this._ocean = new objects.Ocean(0);
 
       this._welcomeLabel = new objects.Label("Mail Pilot", "60px", "Dock51", "#FFFF00", 320, 120, true);
       this._startButton = new objects.Button("startButton", 320, 220);

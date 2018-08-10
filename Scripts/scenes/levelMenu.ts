@@ -50,7 +50,7 @@ module scenes {
   
       // Initialize Game Variables and objects
       public Start(): void {
-        this._ocean = new objects.Ocean();
+        this._ocean = new objects.Ocean(0);
   
         this._welcomeLabel = new objects.Label("LEVELS", "60px", "Consolas", "#FAEFFF", 320, 50, true);
         this._levelOneButton = new objects.Button( "levelOneButton", 320, 160);

@@ -35,7 +35,7 @@ var scenes;
         // Public Methods
         // Initialize Game Variables and objects
         NextLevel.prototype.Start = function () {
-            this._ocean = new objects.Ocean();
+            this._ocean = new objects.Ocean(0);
             this._overLabel = new objects.Label("LEVEL COMPLETED", "60px", "Dock51", "#FFFF00", 320, 140, true);
             this._nextLevelButton = new objects.Button("nextLevelButton", 320, 340);
             this._scoreboard = new managers.ScoreBoard();

@@ -14,13 +14,26 @@ var objects;
         __extends(Ocean, _super);
         // public properties
         // Constructor
-        function Ocean() {
+        function Ocean(number) {
             var _this = this;
-            if (managers.Game.HighScore > 100) {
+            console.log(number);
+            if (number == 1) {
                 _this = _super.call(this, managers.Game.assetManager.getResult("ocean")) || this;
+                _this.Start();
             }
-            _this = _super.call(this, managers.Game.assetManager.getResult("level2")) || this;
-            _this.Start();
+            else if (number == 2) {
+                _this = _super.call(this, managers.Game.assetManager.getResult("level2")) || this;
+                _this.Start();
+                console.log("level 2");
+            }
+            else if (number == 3) {
+                _this = _super.call(this, managers.Game.assetManager.getResult("level3")) || this;
+                _this.Start();
+            }
+            else {
+                _this = _super.call(this, managers.Game.assetManager.getResult("ocean")) || this;
+                _this.Start();
+            }
             return _this;
         }
         // private methods
