@@ -36,7 +36,7 @@ var scenes;
             this._island = new objects.Island();
             // instantiate the cloud array
             this._clouds = new Array();
-            this._cloudNum = 2;
+            this._cloudNum = 5;
             // loop and add each cloud to the array
             for (var count = 0; count < this._cloudNum; count++) {
                 this._clouds[count] = new objects.Cloud();
@@ -52,7 +52,7 @@ var scenes;
         // triggered every frame
         LevelTwo.prototype.Update = function () {
             var _this = this;
-            if (managers.Game.HighScore > 300) {
+            if (managers.Game.HighScore >= 300) {
                 this._engineSound.stop();
                 managers.Game.currentScene = config.Scene.NEXTLEVEL;
             }

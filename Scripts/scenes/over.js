@@ -21,7 +21,16 @@ var scenes;
         }
         // Private Mathods
         OverScene.prototype._restartButtonClick = function () {
-            managers.Game.currentScene = config.Scene.PLAY;
+            console.log(managers.Game.HighScore);
+            if (managers.Game.HighScore < 250) {
+                managers.Game.currentScene = config.Scene.LEVEL1;
+            }
+            if ((managers.Game.HighScore > 250) && (managers.Game.HighScore < 450)) {
+                managers.Game.currentScene = config.Scene.LEVEL2;
+            }
+            if ((managers.Game.HighScore > 450) && (managers.Game.HighScore < 550)) {
+                managers.Game.currentScene = config.Scene.LEVEL3;
+            }
         };
         OverScene.prototype._menuButtonClick = function () {
             managers.Game.currentScene = config.Scene.START;
