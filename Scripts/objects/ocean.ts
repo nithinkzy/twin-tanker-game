@@ -25,6 +25,11 @@ module objects {
       super(managers.Game.assetManager.getResult("level3"));
       this.Start();
     }
+    else if( number ==0)
+    {
+      super(managers.Game.assetManager.getResult("bg"));
+      this.Start();
+    }
     else
     {
       super(managers.Game.assetManager.getResult("ocean"));

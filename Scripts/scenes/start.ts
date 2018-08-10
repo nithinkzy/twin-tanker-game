@@ -37,10 +37,10 @@ module scenes {
 
       this._ocean = new objects.Ocean(0);
 
-      this._welcomeLabel = new objects.Label("Mail Pilot", "60px", "Dock51", "#FFFF00", 320, 120, true);
-      this._startButton = new objects.Button("startButton", 320, 220);
-      this._helpButton = new objects.Button("helpButton", 320, 290);
-      this._exitButton = new objects.Button("exitButton", 320, 360);
+      this._welcomeLabel = new objects.Label("TANKER", "60px", "Dock51", "#FF6347", 320, 120, true);
+      this._startButton = new objects.Button("startButton", 320, 250);
+      this._helpButton = new objects.Button("helpButton", 320, 320);
+      this._exitButton = new objects.Button("exitButton", 320, 390);
       this.Main();
     }
 

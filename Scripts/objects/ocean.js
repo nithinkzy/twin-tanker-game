@@ -30,6 +30,10 @@ var objects;
                 _this = _super.call(this, managers.Game.assetManager.getResult("level3")) || this;
                 _this.Start();
             }
+            else if (number == 0) {
+                _this = _super.call(this, managers.Game.assetManager.getResult("bg")) || this;
+                _this.Start();
+            }
             else {
                 _this = _super.call(this, managers.Game.assetManager.getResult("ocean")) || this;
                 _this.Start();
