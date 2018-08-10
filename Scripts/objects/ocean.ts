@@ -7,7 +7,11 @@ module objects {
 
     // Constructor
     constructor() {
-      super(managers.Game.assetManager.getResult("ocean"));
+      if (managers.Game.HighScore> 100)
+      {
+        super(managers.Game.assetManager.getResult("ocean"));
+      }
+      super(managers.Game.assetManager.getResult("level2"));
       this.Start();
     }
 
@@ -20,28 +24,28 @@ module objects {
 
     // move the object to some new location
     private _move():void {
-      this.y += this._dy;
+      //this.y += this._dy;
     }
 
     // check to see if some boundary has been passed
     private _checkBounds():void {
-      if(this.y >= 0) {
-        this._reset();
-      }
+     // if(this.y >= 0) {
+//this._reset();
+     // }
     }
 
     // public methods
 
     // Initializes variables and creates new objects
     public Start():void {
-      this._dy = 5;
-      this._reset();
+    //  this._dy = 5;
+     // this._reset();
     }
 
     // updates the game object every frame
     public Update():void {
      // this._move();
-      this._checkBounds();
+     // this._checkBounds();
     }
   }
 }

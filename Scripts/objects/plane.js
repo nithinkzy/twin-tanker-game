@@ -18,6 +18,13 @@ var objects;
             _this.Start();
             return _this;
         }
+        Object.defineProperty(Plane.prototype, "Score", {
+            get: function () {
+                return this._direction;
+            },
+            enumerable: true,
+            configurable: true
+        });
         // private methods
         Plane.prototype._animationEnded = function () {
             if (this.alpha == 0) {
@@ -47,7 +54,8 @@ var objects;
         // move the object to some new location
         Plane.prototype.Move = function () {
             // mouse controls
-            // this.x = objects.Game.stage.mouseX;
+            // this.x = managers.Game.stage.mouseX;
+            //this.y = managers.Game.stage.mouseY;
             // keyboard controls
             if (managers.Game.keyboardManager.moveForward) {
                 this.rotation = 0;
@@ -55,6 +63,7 @@ var objects;
             }
             if (managers.Game.keyboardManager.moveBackward) {
                 this.rotation = 180;
+                managers.Game.direction = 180;
                 this.y += 2;
             }
             if (managers.Game.keyboardManager.moveLeft) {

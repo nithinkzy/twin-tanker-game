@@ -30,12 +30,13 @@ module objects {
     }
 
     public CheckBounds():void {
-      if(this.y <= -this.height) {
+      if(this.y <= -this.height ) {
         this.Reset();
       }
     }
 
     public Move():void {
+      
       this.y += this._dy;
     }
   }

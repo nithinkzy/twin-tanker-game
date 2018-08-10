@@ -102,6 +102,8 @@
     assetManifest = [
         { id: "textureAtlas", src: "./Assets/sprites/textureAtlas.png" },
         { id: "ocean", src: "./Assets/images/ocean.png" },
+        { id: "level2", src: "./Assets/images/ocean2.png" },
+        { id: "level3", src: "./Assets/images/ocean3.png" },
         { id: "engine", src: "./Assets/audio/engine.ogg" },
         { id: "coin", src: "./Assets/audio/coin.wav" },
         { id: "life", src: "./Assets/audio/life.wav" },

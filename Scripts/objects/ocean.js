@@ -15,7 +15,11 @@ var objects;
         // public properties
         // Constructor
         function Ocean() {
-            var _this = _super.call(this, managers.Game.assetManager.getResult("ocean")) || this;
+            var _this = this;
+            if (managers.Game.HighScore > 100) {
+                _this = _super.call(this, managers.Game.assetManager.getResult("ocean")) || this;
+            }
+            _this = _super.call(this, managers.Game.assetManager.getResult("level2")) || this;
             _this.Start();
             return _this;
         }
@@ -26,24 +30,24 @@ var objects;
         };
         // move the object to some new location
         Ocean.prototype._move = function () {
-            this.y += this._dy;
+            //this.y += this._dy;
         };
         // check to see if some boundary has been passed
         Ocean.prototype._checkBounds = function () {
-            if (this.y >= 0) {
-                this._reset();
-            }
+            // if(this.y >= 0) {
+            //this._reset();
+            // }
         };
         // public methods
         // Initializes variables and creates new objects
         Ocean.prototype.Start = function () {
-            this._dy = 5;
-            this._reset();
+            //  this._dy = 5;
+            // this._reset();
         };
         // updates the game object every frame
         Ocean.prototype.Update = function () {
             // this._move();
-            this._checkBounds();
+            // this._checkBounds();
         };
         return Ocean;
     }(createjs.Bitmap));

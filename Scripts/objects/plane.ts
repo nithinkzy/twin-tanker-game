@@ -2,9 +2,15 @@ module objects {
   export class Plane extends objects.GameObject {
     // private instance variables
     private _bulletSpawn:math.Vec2;
+    private _direction:number;
 
     // public properties
+    
     public planeFlash: objects.PlaneFlash;
+     get Score():number {
+      return this._direction;
+    }
+ 
 
     // Constructor
     constructor() {
@@ -48,16 +54,20 @@ module objects {
     // move the object to some new location
     public Move():void {
      // mouse controls
-     // this.x = objects.Game.stage.mouseX;
+     // this.x = managers.Game.stage.mouseX;
+      //this.y = managers.Game.stage.mouseY;
 
      // keyboard controls
      if(managers.Game.keyboardManager.moveForward) {
        this.rotation = 0;
+
              this.y -= 2;
     }
 
     if(managers.Game.keyboardManager.moveBackward) {
       this.rotation = 180;
+      managers.Game.direction = 180;
+      
       this.y += 2;
     }
     if(managers.Game.keyboardManager.moveLeft) {

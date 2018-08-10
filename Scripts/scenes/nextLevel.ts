@@ -25,6 +25,8 @@ module scenes {
             case 400:
             managers.Game.currentScene = config.Scene.LEVEL3;
             break;
+            default:
+            managers.Game.currentScene = config.Scene.OVER;
 
           }
        
