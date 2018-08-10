@@ -70,6 +70,10 @@ module scenes {
       // triggered every frame
       public Update(): void {
         //console.log("Num Objects: " + this.numChildren);
+        if(managers.Game.HighScore >= 500){
+          this._engineSound.stop();
+          managers.Game.currentScene = config.Scene.NEXTLEVEL;
+        }
   
         this._ocean.Update();
         this._plane.Update();

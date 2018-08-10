@@ -69,7 +69,7 @@ module scenes {
   
       // triggered every frame
       public Update(): void {
-        if(managers.Game.HighScore >= 300){
+        if((managers.Game.HighScore >= 300)&& (managers.Game.HighScore <= 450)){
           this._engineSound.stop();
           managers.Game.currentScene = config.Scene.NEXTLEVEL;
         }

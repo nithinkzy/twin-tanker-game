@@ -70,7 +70,7 @@ module scenes {
       // triggered every frame
       public Update(): void {
         //console.log("Num Objects: " + this.numChildren);
-        if(managers.Game.HighScore > 100){
+        if((managers.Game.HighScore >= 200)&& (managers.Game.HighScore <= 300)){
             this._engineSound.stop();
             managers.Game.currentScene = config.Scene.NEXTLEVEL;
           }

@@ -51,8 +51,12 @@ var scenes;
         };
         // triggered every frame
         LevelThree.prototype.Update = function () {
-            //console.log("Num Objects: " + this.numChildren);
             var _this = this;
+            //console.log("Num Objects: " + this.numChildren);
+            if (managers.Game.HighScore >= 500) {
+                this._engineSound.stop();
+                managers.Game.currentScene = config.Scene.NEXTLEVEL;
+            }
             this._ocean.Update();
             this._plane.Update();
             this._tankeOne.Update();
