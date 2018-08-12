@@ -181,6 +181,9 @@
             case config.Scene.NEXTLEVEL:
                 currentScene = new scenes.NextLevel();
                 break;
+            case config.Scene.HELP:
+                currentScene = new scenes.HelpScene();
+                break;
         }
         currentState = managers.Game.currentScene;
         managers.Game.currentSceneObject = currentScene;

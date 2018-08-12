@@ -244,6 +244,27 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
+            <key type="filename">../images/exitButton.png</key>
+            <key type="filename">../images/helpButton.png</key>
+            <key type="filename">../images/levelOneButton.png</key>
+            <key type="filename">../images/levelThreeButton.png</key>
+            <key type="filename">../images/levelTwoButton.png</key>
+            <key type="filename">../images/menuButton.png</key>
+            <key type="filename">../images/nextLevelButton.png</key>
+            <key type="filename">../images/startButton.png</key>
+            <key type="filename">../images/tryAgainButton.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>50,15,100,30</rect>
+                <key>scale9Paddings</key>
+                <rect>50,15,100,30</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">../images/explosion1.png</key>
             <key type="filename">../images/explosion2.png</key>
             <key type="filename">../images/explosion3.png</key>
@@ -253,7 +274,6 @@
             <key type="filename">../images/explosion7.png</key>
             <key type="filename">../images/plane1.png</key>
             <key type="filename">../images/plane2.png</key>
-            <key type="filename">../images/plane3.png</key>
             <key type="filename">../images/planeflash1.png</key>
             <key type="filename">../images/planeflash2.png</key>
             <struct type="IndividualSpriteSettings">
@@ -281,20 +301,6 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../images/restartButton.png</key>
-            <key type="filename">../images/startButton.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>50,15,100,30</rect>
-                <key>scale9Paddings</key>
-                <rect>50,15,100,30</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
             <key type="filename">../images/smallexplosion1.png</key>
             <key type="filename">../images/smallexplosion2.png</key>
             <key type="filename">../images/smallexplosion3.png</key>
@@ -316,13 +322,11 @@
         </map>
         <key>fileList</key>
         <array>
-            <filename>../images/restartButton.png</filename>
             <filename>../images/startButton.png</filename>
             <filename>../images/cloud.png</filename>
             <filename>../images/island.png</filename>
             <filename>../images/plane1.png</filename>
             <filename>../images/plane2.png</filename>
-            <filename>../images/plane3.png</filename>
             <filename>../images/coin01.png</filename>
             <filename>../images/coin02.png</filename>
             <filename>../images/coin03.png</filename>
@@ -352,6 +356,14 @@
             <filename>../images/smallexplosion4.png</filename>
             <filename>../images/smallexplosion5.png</filename>
             <filename>../images/smallexplosion6.png</filename>
+            <filename>../images/tryAgainButton.png</filename>
+            <filename>../images/exitButton.png</filename>
+            <filename>../images/helpButton.png</filename>
+            <filename>../images/menuButton.png</filename>
+            <filename>../images/nextLevelButton.png</filename>
+            <filename>../images/levelOneButton.png</filename>
+            <filename>../images/levelThreeButton.png</filename>
+            <filename>../images/levelTwoButton.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

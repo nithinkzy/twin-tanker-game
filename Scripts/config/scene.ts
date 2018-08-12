@@ -7,6 +7,7 @@ module config {
     LEVEL1,
     LEVEL2,
     LEVEL3,
-    NEXTLEVEL
+    NEXTLEVEL,
+    HELP
   }
 }

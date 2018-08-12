@@ -22,7 +22,7 @@ module scenes {
       managers.Game.currentScene = config.Scene.LEVELS;
     }
     private _helpButtonClick():void {
-      managers.Game.currentScene = config.Scene.PLAY;
+      managers.Game.currentScene = config.Scene.HELP;
     }
     private _exitButtonClick():void {
      window.close();

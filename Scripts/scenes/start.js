@@ -24,7 +24,7 @@ var scenes;
             managers.Game.currentScene = config.Scene.LEVELS;
         };
         StartScene.prototype._helpButtonClick = function () {
-            managers.Game.currentScene = config.Scene.PLAY;
+            managers.Game.currentScene = config.Scene.HELP;
         };
         StartScene.prototype._exitButtonClick = function () {
             window.close();
