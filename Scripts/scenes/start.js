@@ -16,14 +16,19 @@ var scenes;
         // Constructor
         function StartScene() {
             var _this = _super.call(this) || this;
+            _this.flag = 0;
             _this.Start();
             return _this;
         }
         // Private Mathods
         StartScene.prototype._startButtonClick = function () {
+            console.log("startbuton pressed");
+            this.flag = 1;
             managers.Game.currentScene = config.Scene.LEVELS;
         };
         StartScene.prototype._helpButtonClick = function () {
+            this.flag = 1;
+            this.Update();
             managers.Game.currentScene = config.Scene.HELP;
         };
         StartScene.prototype._exitButtonClick = function () {
@@ -32,6 +37,9 @@ var scenes;
         // Public Methods
         // Initialize Game Variables and objects
         StartScene.prototype.Start = function () {
+            //this._engineSound = createjs.Sound.play("engine");
+            //t/his._engineSound.loop = -1; // play forever
+            //this._engineSound.volume = 0.3;
             this._ocean = new objects.Ocean(0);
             this._welcomeLabel = new objects.Label("TANKER", "60px", "Dock51", "#FF6347", 320, 120, true);
             this._startButton = new objects.Button("startButton", 320, 250);
@@ -41,6 +49,9 @@ var scenes;
         };
         StartScene.prototype.Update = function () {
             this._ocean.Update();
+            if (this.flag == 1) {
+                this._engineSound.stop();
+            }
         };
         // This is where the fun happens
         StartScene.prototype.Main = function () {

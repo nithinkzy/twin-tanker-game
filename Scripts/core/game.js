@@ -110,7 +110,9 @@
         { id: "coin", src: "./Assets/audio/coin.wav" },
         { id: "life", src: "./Assets/audio/life.wav" },
         { id: "explosion", src: "./Assets/audio/explosion.mp3" },
-        { id: "bulletSound", src: "./Assets/audio/bullet.mp3" }
+        { id: "bulletSound", src: "./Assets/audio/bullet.mp3" },
+        { id: "button", src: "./Assets/audio/button.mp3" },
+        { id: "bulletOpen", src: "./Assets/audio/buttonOpen.mp3" },
     ];
     // preloads assets
     function Init() {

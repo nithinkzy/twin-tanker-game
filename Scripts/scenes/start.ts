@@ -6,6 +6,8 @@ module scenes {
     private _helpButton: objects.Button;
     private _exitButton: objects.Button;
     private _ocean: objects.Ocean;
+    public _engineSound: createjs.AbstractSoundInstance;
+    public  flag:number =0;
 
 
     // Public Properties
@@ -19,9 +21,14 @@ module scenes {
 
     // Private Mathods
     private _startButtonClick():void {
+      console.log("startbuton pressed");
+     this.flag =1;
+     
       managers.Game.currentScene = config.Scene.LEVELS;
     }
     private _helpButtonClick():void {
+      this.flag =1;
+      this.Update();
       managers.Game.currentScene = config.Scene.HELP;
     }
     private _exitButtonClick():void {
@@ -33,7 +40,9 @@ module scenes {
 
     // Initialize Game Variables and objects
     public Start(): void {
-
+      //this._engineSound = createjs.Sound.play("engine");
+      //t/his._engineSound.loop = -1; // play forever
+      //this._engineSound.volume = 0.3;
 
       this._ocean = new objects.Ocean(0);
 
@@ -46,6 +55,11 @@ module scenes {
 
     public Update(): void {
       this._ocean.Update();
+      if(this.flag==1)
+      {
+        this._engineSound.stop();
+      }
+      
     }
 
     // This is where the fun happens

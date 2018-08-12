@@ -12,7 +12,6 @@ var objects;
 (function (objects) {
     var Button = /** @class */ (function (_super) {
         __extends(Button, _super);
-        // Private Instance Variables
         // Public Properties
         // Constructor
         function Button(imageString, x, y) {
@@ -28,6 +27,7 @@ var objects;
         // Private Methods
         Button.prototype._mouseOver = function () {
             this.alpha = 0.7;
+            this._buttonSound = createjs.Sound.play("button");
         };
         Button.prototype._mouseOut = function () {
             this.alpha = 1.0;

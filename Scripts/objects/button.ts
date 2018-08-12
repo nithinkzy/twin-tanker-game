@@ -1,7 +1,7 @@
 module objects {
     export class Button extends objects.GameObject{
         // Private Instance Variables
-
+        public _buttonSound: createjs.AbstractSoundInstance;
         // Public Properties
 
         // Constructor
@@ -17,6 +17,7 @@ module objects {
         // Private Methods
         private _mouseOver():void {
             this.alpha = 0.7;
+            this._buttonSound = createjs.Sound.play("button");
         }
 
         private _mouseOut():void {
