@@ -36,7 +36,7 @@ var objects;
         // Initializes variables and creates new objects
         Plane.prototype.Start = function () {
             this.planeFlash = new objects.PlaneFlash();
-            this.planeFlash.alpha = 1;
+            this.planeFlash.alpha = 0;
             this.planeFlash.on("animationend", this._animationEnded.bind(this), false);
             this.x = 320;
             this.y = 430;
@@ -74,8 +74,8 @@ var objects;
                 this.rotation = 90;
                 this.x += 2;
             }
-            this.planeFlash.x = this.x;
-            this.planeFlash.y = this.y;
+            // this.planeFlash.x = this.x;
+            // this.planeFlash.y = this.y;
         };
         // check to see if some boundary has been passed
         Plane.prototype.CheckBounds = function () {

@@ -27,6 +27,7 @@ var scenes;
             this._plane = new objects.Plane();
             managers.Game.plane = this._plane;
             this._tankeOne = new objects.tankOne();
+            managers.Game.tank2 = this._tankeOne;
             // make a reference to the bullet manager in the game manager
             this._bulletManager = new managers.Bullet();
             managers.Game.bulletManger = this._bulletManager;
@@ -68,6 +69,8 @@ var scenes;
             this._island.Update();
             // check collision between plane and coin
             managers.Collision.Check(this._plane, this._coin);
+            // check collision between tank 2 and coin
+            managers.Collision.Check(this._tankeOne, this._coin);
             this._clouds.forEach(function (cloud) {
                 cloud.Update();
                 // check collision between plane and current cloud

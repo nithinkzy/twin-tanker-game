@@ -9,6 +9,8 @@ module managers {
     public static HighScore: number = 0;
     public static textureAtlas: createjs.SpriteSheet;
     public static plane: objects.Plane;
+    public static tank2: objects.tankOne;
+
     public static bulletManger: managers.Bullet;
     public static direction:number;
   }

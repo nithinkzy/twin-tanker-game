@@ -31,7 +31,7 @@ module objects {
     // Initializes variables and creates new objects
     public Start():void {
       this.planeFlash = new objects.PlaneFlash();
-      this.planeFlash.alpha = 1;
+      this.planeFlash.alpha = 0;
       this.planeFlash.on("animationend", this._animationEnded.bind(this), false );
 
       this.x = 320;
@@ -81,8 +81,8 @@ module objects {
    }
     
 
-     this.planeFlash.x = this.x;
-     this.planeFlash.y = this.y;
+    // this.planeFlash.x = this.x;
+    // this.planeFlash.y = this.y;
 
     }
 
