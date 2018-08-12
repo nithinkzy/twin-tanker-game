@@ -117,6 +117,8 @@ module scenes {
         });
 
        
+
+       
   
         // if lives fall below zero switch scenes to the game over scene
         if(this._scoreBoard.Lives <= 0) {
