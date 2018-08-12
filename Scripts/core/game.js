@@ -35,6 +35,7 @@
             [48, 54, 93, 74, 0, 0, 0],
             [143, 54, 93, 74, 0, 0, 0],
             [238, 54, 93, 74, 0, 0, 0],
+            [333, 54, 93, 74, 0, 0, 0],
             [2, 130, 200, 60, 0, 0, 0],
             [204, 130, 65, 65, 0, 0, 0],
             [271, 130, 65, 65, 0, 0, 0],
@@ -71,32 +72,32 @@
                 "speed": 0.33
             },
             "enemy": {
-                "frames": [12, 13, 14],
+                "frames": [12, 13, 14, 15],
                 "speed": 0.25
             },
             "exitButton": {
-                "frames": [15]
+                "frames": [16]
             },
             "explosion": {
-                "frames": [16, 17, 18, 19, 20, 21, 22]
+                "frames": [17, 18, 19, 20, 21, 22, 23]
             },
             "helpButton": {
-                "frames": [23]
-            },
-            "island": {
                 "frames": [24]
             },
-            "levelOneButton": { "frames": [25] },
-            "levelThreeButton": { "frames": [26] },
-            "levelTwoButton": { "frames": [27] },
-            "menuButton": { "frames": [28] },
-            "nextLevelButton": { "frames": [29] },
-            "plane1": { "frames": [30] },
-            "plane2": { "frames": [31] },
-            "planeflash": { "frames": [32, 33] },
-            "smallexplosion": { "frames": [34, 35, 36, 37, 38, 39] },
-            "startButton": { "frames": [40] },
-            "tryAgainButton": { "frames": [41] }
+            "island": {
+                "frames": [25]
+            },
+            "levelOneButton": { "frames": [26] },
+            "levelThreeButton": { "frames": [27] },
+            "levelTwoButton": { "frames": [28] },
+            "menuButton": { "frames": [29] },
+            "nextLevelButton": { "frames": [30] },
+            "plane1": { "frames": [31] },
+            "plane2": { "frames": [32] },
+            "planeflash": { "frames": [33, 34] },
+            "smallexplosion": { "frames": [35, 36, 37, 38, 39, 40] },
+            "startButton": { "frames": [41] },
+            "tryAgainButton": { "frames": [42] }
         },
     };
     assetManifest = [
@@ -105,7 +106,7 @@
         { id: "bg", src: "./Assets/images/gameBG.png" },
         { id: "level2", src: "./Assets/images/ocean2.png" },
         { id: "level3", src: "./Assets/images/ocean3.png" },
-        { id: "engine", src: "./Assets/audio/engine.ogg" },
+        { id: "engine", src: "./Assets/audio/engine.mp3" },
         { id: "coin", src: "./Assets/audio/coin.wav" },
         { id: "life", src: "./Assets/audio/life.wav" },
         { id: "explosion", src: "./Assets/audio/explosion.mp3" },
