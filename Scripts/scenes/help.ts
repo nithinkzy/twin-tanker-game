@@ -7,6 +7,8 @@ module scenes {
       private _moveleft: objects.Label;
       private _moveright: objects.Label;
       private _movedown: objects.Label;
+      private _label1: objects.Label;
+      private _label2: objects.Label;
        private _backButton: objects.Button;
       private _ocean: objects.Ocean;
   
@@ -37,6 +39,8 @@ module scenes {
         this._movedown = new objects.Label("2.Avoid missile", "20px", "Consolas", "#FAEFFF", 320, 180, true);
         this._moveleft = new objects.Label("3.Kill Enemies to get extra bonus", "20px", "Consolas", "#FAEFFF", 320, 210, true);
         this._moveright = new objects.Label("4.Score to complete levels", "20px", "Consolas", "#FAEFFF", 320, 240, true);
+        this._label1 = new objects.Label("5.Player one is slow moving, No missles harms it", "20px", "Consolas", "#FAEFFF", 320, 270, true);
+        this._label2 = new objects.Label("6.Player tw0 is moves fast, missles harms it", "20px", "Consolas", "#FAEFFF", 320, 300, true);
 
         
         this._backButton = new objects.Button("menuButton", 320, 430);
@@ -68,6 +72,8 @@ module scenes {
           this.addChild(this._moveleft);
           this.addChild(this._moveright);
           this.addChild(this._moveup);
+          this.addChild(this._label1);
+          this.addChild(this._label2);
 
       
   

@@ -30,11 +30,14 @@ var managers;
                         case "cloud":
                             if (managers.Game.scoreBoard.Lives != 0) {
                                 createjs.Sound.play("explosion");
+                                console.log("Hit");
+                                // object2.alpha = 0;
                                 managers.Game.scoreBoard.Lives -= 1;
                                 var explosion = new objects.Explosion("explosion");
                                 explosion.x = object1.x;
                                 explosion.y = object1.y;
                                 managers.Game.currentSceneObject.addChild(explosion);
+                                //object2.alpha=1;
                                 //  object1.alpha = 0; // make the plane object invisible
                                 // managers.Game.plane.planeFlash.alpha = 1;
                                 // managers.Game.plane.planeFlash.gotoAndPlay("planeflash");

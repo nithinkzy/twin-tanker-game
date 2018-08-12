@@ -1,6 +1,7 @@
 module objects {
     export class tankOne extends objects.GameObject {
       // private instance variables
+      
       private _bulletSpawn:math.Vec2;
   
       // public properties
@@ -53,21 +54,21 @@ module objects {
        // keyboard controls
        if(managers.Game.keyboardManager.moveForward1) {
          this.rotation = 0;
-               this.y -= 2;
+               this.y -= 1;
       }
   
       if(managers.Game.keyboardManager.moveBackward1) {
         this.rotation = 180;
-        this.y += 2;
+        this.y += 1;
       }
       if(managers.Game.keyboardManager.moveLeft1) {
         this.rotation=-90;
-       this.x -= 2;
+       this.x -= 1;
      }
   
      if(managers.Game.keyboardManager.moveRight1) {
        this.rotation = 90;
-       this.x += 2;
+       this.x += 1;
      }
       
   

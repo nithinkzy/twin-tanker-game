@@ -107,6 +107,8 @@ module scenes {
         this._bulletManager.Bullets.forEach(bullet => {
           managers.Collision.Check(bullet, this._enemy);
         });
+
+       
   
         // if lives fall below zero switch scenes to the game over scene
         if(this._scoreBoard.Lives <= 0) {
