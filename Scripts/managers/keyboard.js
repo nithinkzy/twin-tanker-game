@@ -36,7 +36,7 @@ var managers;
                     this.moveRight = true;
                     break;
                 case config.Keys.T:
-                    this.fire = true;
+                    this.fire2 = true;
                     break;
                 case config.Keys.SPACE:
                     this.fire = true;
@@ -66,7 +66,7 @@ var managers;
                     this.moveRight1 = false;
                     break;
                 case config.Keys.T:
-                    this.fire = false;
+                    this.fire2 = false;
                     break;
                 case config.Keys.SPACE:
                     this.fire = false;

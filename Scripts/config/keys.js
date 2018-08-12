@@ -13,9 +13,9 @@ var config;
         Keys.A = 65;
         Keys.S = 83;
         Keys.D = 68;
-        Keys.T = 51;
+        Keys.T = 71;
         // space bar
-        Keys.SPACE = 32;
+        Keys.SPACE = 76;
         return Keys;
     }());
     config.Keys = Keys;

@@ -12,6 +12,7 @@ module managers {
     public moveLeft1: boolean;
     public moveRight1: boolean;
     public fire: boolean;
+    public fire2: boolean;
     
     public enabled: boolean;
     public paused: boolean;
@@ -56,7 +57,7 @@ module managers {
           this.moveRight = true;
         break;
         case config.Keys.T:
-        this.fire = true;
+        this.fire2 = true;
       break;
 
         
@@ -94,7 +95,7 @@ module managers {
         break;
 
         case config.Keys.T:
-        this.fire = false;
+        this.fire2 = false;
       break;
         case config.Keys.SPACE:
           this.fire = false;

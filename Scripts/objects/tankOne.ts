@@ -102,7 +102,7 @@ module objects {
         // check if Plane is "alive"
         if(this.alpha = 1) {
           let ticker:number = createjs.Ticker.getTicks();
-          if((managers.Game.keyboardManager.fire) && (ticker % 10 == 0)) {
+          if((managers.Game.keyboardManager.fire2) && (ticker % 10 == 0)) {
             this._bulletSpawn = new math.Vec2(this.x, this.y - this. halfHeight);
             let currentBullet = managers.Game.bulletManger.CurrentBullet;
             let bullet = managers.Game.bulletManger.Bullets[currentBullet];

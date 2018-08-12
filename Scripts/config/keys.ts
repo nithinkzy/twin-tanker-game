@@ -12,9 +12,9 @@ module config {
     public static S: number = 83;
     public static D: number = 68;
 
-    public static T: number = 51;
+    public static T: number = 71;
 
     // space bar
-    public static SPACE: number = 32;
+    public static SPACE: number = 76;
   }
 }
