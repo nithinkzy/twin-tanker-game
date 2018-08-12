@@ -9,7 +9,7 @@ module scenes {
       private _cloudNum: number;
       private _scoreBoard: managers.ScoreBoard;
       private _bulletManager: managers.Bullet;
-  
+    
       private _engineSound: createjs.AbstractSoundInstance;
       private _coin: objects.Coin;
       private _enemy: objects.Enemy;
@@ -62,7 +62,7 @@ module scenes {
   
         this._engineSound = createjs.Sound.play("engine");
         this._engineSound.loop = -1; // play forever
-        this._engineSound.volume = 0.3;
+        this._engineSound.volume = 0.1;
   
         // create the scoreboard UI for the Scene
         this._scoreBoard = new managers.ScoreBoard();
@@ -126,6 +126,7 @@ module scenes {
         if(this._scoreBoard.Score>200)
         {
           this._overLabel = new objects.Label("Boss coming !", "40px", "Dock51", "#FF6347", 320, 60, true);
+          this._engineSound = createjs.Sound.play("bossEntry");
           this.addChild(this._overLabel);
           this.addChild(this._boss);
         }

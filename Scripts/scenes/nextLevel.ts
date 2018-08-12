@@ -4,6 +4,7 @@ module scenes {
     private _overLabel: objects.Label;
     private _nextLevelButton: objects.Button;
     private _ocean: objects.Ocean;
+    private _victory: createjs.AbstractSoundInstance;
 
     private _scoreboard: managers.ScoreBoard;
 
@@ -18,24 +19,25 @@ module scenes {
 
     // Private Mathods
     private _nextLevelButtonClick(): void {
-      switch (managers.Game.HighScore) {
-        case 200:
-          managers.Game.currentScene = config.Scene.LEVEL2;
-          break;
-        case 400:
-          managers.Game.currentScene = config.Scene.LEVEL3;
-          break;
-        default:
-          managers.Game.currentScene = config.Scene.OVER;
+      if(managers.Game.HighScore>200 ) {
+                  managers.Game.currentScene = config.Scene.LEVEL2;}
+       else if(managers.Game.HighScore>500 && managers.Game.HighScore<800 ) {
+        managers.Game.currentScene = config.Scene.LEVEL3;
+         }
+          else{
+            managers.Game.currentScene = config.Scene.OVER;
+          }
+          
 
       }
 
-    }
+  
 
     // Public Methods
 
     // Initialize Game Variables and objects
     public Start(): void {
+      this._victory = createjs.Sound.play("victory");
       this._ocean = new objects.Ocean(0);
       this._overLabel = new objects.Label("LEVEL COMPLETED", "60px", "Dock51", "#FFFF00", 320, 140, true);
       this._nextLevelButton = new objects.Button("nextLevelButton", 320, 340);

@@ -24,7 +24,7 @@ var objects;
         // public methods
         // Initializes variables and creates new objects
         Boss.prototype.Start = function () {
-            this._dy = 5;
+            this._dy = 2;
             this.Reset();
         };
         // updates the game object every frame

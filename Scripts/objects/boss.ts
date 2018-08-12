@@ -12,7 +12,7 @@ module objects {
       // public methods
       // Initializes variables and creates new objects
       public Start():void {
-        this._dy = 5;
+        this._dy = 2;
         this.Reset();
       }
   

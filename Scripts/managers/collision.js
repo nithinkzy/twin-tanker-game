@@ -14,7 +14,7 @@ var managers;
                         case "coin":
                             if ((object2.alpha != 0) && (object1.alpha != 0)) {
                                 createjs.Sound.play("coin");
-                                managers.Game.scoreBoard.Score += 100;
+                                managers.Game.scoreBoard.Score += 50;
                                 object2.alpha = 0;
                                 // add a life power up
                                 if (managers.Game.scoreBoard.Score % 1000 == 0) {
@@ -50,7 +50,7 @@ var managers;
                                 explosion.x = object2.x;
                                 explosion.y = object2.y;
                                 managers.Game.currentSceneObject.addChild(explosion);
-                                managers.Game.scoreBoard.Score += 200;
+                                managers.Game.scoreBoard.Score += 100;
                                 object2.Reset();
                             }
                             break;
@@ -61,8 +61,8 @@ var managers;
                                 explosion.x = object2.x;
                                 explosion.y = object2.y;
                                 managers.Game.currentSceneObject.addChild(explosion);
-                                managers.Game.scoreBoard.Score += 200;
-                                object2.Reset();
+                                //managers.Game.scoreBoard.Score += 100;
+                                // object2.Reset();
                                 managers.Game.currentScene = config.Scene.NEXTLEVEL;
                             }
                             break;

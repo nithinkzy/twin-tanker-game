@@ -14,6 +14,7 @@
     var textureAtlasData;
     var textureAtlas;
     var stats;
+    var level;
     textureAtlasData = {
         "images": [
             ""
@@ -118,6 +119,8 @@
         { id: "bulletSound", src: "./Assets/audio/bullet.mp3" },
         { id: "button", src: "./Assets/audio/button.mp3" },
         { id: "bulletOpen", src: "./Assets/audio/buttonOpen.mp3" },
+        { id: "bossEntry", src: "./Assets/audio/bossEntry.mp3" },
+        { id: "victory", src: "./Assets/audio/victory.mp3" }
     ];
     // preloads assets
     function Init() {
