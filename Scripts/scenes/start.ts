@@ -4,6 +4,7 @@ module scenes {
     private _welcomeLabel: objects.Label;
     private _startButton: objects.Button;
     private _helpButton: objects.Button;
+    private _controlButton: objects.Button;
     private _exitButton: objects.Button;
     private _ocean: objects.Ocean;
     public _engineSound: createjs.AbstractSoundInstance;
@@ -34,6 +35,10 @@ module scenes {
     private _exitButtonClick():void {
      window.close();
     }
+    private _controlButtonClick():void {
+         
+      managers.Game.currentScene = config.Scene.CONTROL;
+    }
 
 
     // Public Methods
@@ -46,10 +51,11 @@ module scenes {
 
       this._ocean = new objects.Ocean(0);
 
-      this._welcomeLabel = new objects.Label("TANKER", "60px", "Dock51", "#FF6347", 320, 120, true);
-      this._startButton = new objects.Button("startButton", 320, 250);
-      this._helpButton = new objects.Button("helpButton", 320, 320);
-      this._exitButton = new objects.Button("exitButton", 320, 390);
+      this._welcomeLabel = new objects.Label("TWIN - TANKER", "60px", "Dock51", "#8a0707", 340, 80, true);
+      this._startButton = new objects.Button("startButton", 320, 200);
+      this._helpButton = new objects.Button("helpButton", 320, 270);
+      this._controlButton = new objects.Button("controlButton", 320, 340);
+      this._exitButton = new objects.Button("exitButton", 320, 400);
       this.Main();
     }
 
@@ -75,12 +81,13 @@ module scenes {
 
        // add the helpButton to the scene
        this.addChild(this._helpButton);
-
+       this.addChild(this._controlButton);
        // add the exitButton to the scene
        this.addChild(this._exitButton);
 
        this._startButton.on("click", this._startButtonClick);
        this._helpButton.on("click", this._helpButtonClick);
+       this._controlButton.on("click", this._controlButtonClick);
        this._exitButton.on("click", this._exitButtonClick);
     }
   }
