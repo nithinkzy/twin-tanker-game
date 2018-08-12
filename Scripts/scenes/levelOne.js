@@ -33,6 +33,7 @@ var scenes;
             managers.Game.bulletManger = this._bulletManager;
             // create an enemy object
             this._enemy = new objects.Enemy();
+            this._boss = new objects.Boss();
             this._coin = new objects.Coin();
             this._island = new objects.Island();
             // instantiate the cloud array
@@ -54,14 +55,15 @@ var scenes;
         LevelOne.prototype.Update = function () {
             var _this = this;
             //console.log("Num Objects: " + this.numChildren);
-            if ((managers.Game.HighScore >= 200) && (managers.Game.HighScore <= 300)) {
-                this._engineSound.stop();
-                managers.Game.currentScene = config.Scene.NEXTLEVEL;
-            }
+            // if((managers.Game.HighScore >= 200)&& (managers.Game.HighScore <= 300)){
+            //     this._engineSound.stop();
+            //     managers.Game.currentScene = config.Scene.NEXTLEVEL;
+            // }
             this._ocean.Update();
             this._plane.Update();
             this._tankeOne.Update();
             this._enemy.Update();
+            this._boss.Update();
             this._bulletManager.Update();
             this._coin.x = this._island.x;
             this._coin.y = this._island.y;
@@ -81,10 +83,18 @@ var scenes;
             this._bulletManager.Bullets.forEach(function (bullet) {
                 managers.Collision.Check(bullet, _this._enemy);
             });
+            this._bulletManager.Bullets.forEach(function (bullet) {
+                managers.Collision.Check(bullet, _this._boss);
+            });
             // if lives fall below zero switch scenes to the game over scene
             if (this._scoreBoard.Lives <= 0) {
                 this._engineSound.stop();
                 managers.Game.currentScene = config.Scene.OVER;
+            }
+            if (this._scoreBoard.Score > 200) {
+                this._overLabel = new objects.Label("Boss coming !", "40px", "Dock51", "#FF6347", 320, 60, true);
+                this.addChild(this._overLabel);
+                this.addChild(this._boss);
             }
         };
         // This is where the fun happens

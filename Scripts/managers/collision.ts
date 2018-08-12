@@ -57,6 +57,18 @@ module managers {
                 object2.Reset();
               }
               break;
+              case "boss":
+              if (object2.alpha != 0) {
+                createjs.Sound.play("explosion");
+                let explosion = new objects.Explosion("explosion");
+                explosion.x = object2.x;
+                explosion.y = object2.y;
+                managers.Game.currentSceneObject.addChild(explosion);
+                managers.Game.scoreBoard.Score += 200;
+                object2.Reset();
+                managers.Game.currentScene = config.Scene.NEXTLEVEL;
+              }
+              break;
              
           }
         }
