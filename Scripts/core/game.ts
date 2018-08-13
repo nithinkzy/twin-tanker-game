@@ -121,22 +121,22 @@
   };
 
   assetManifest = [
-    { id: "textureAtlas", src: "./Assets/sprites/textureAtlas.png" },
-    { id: "ocean", src: "./Assets/images/ocean.png" },
-    { id: "help", src: "./Assets/images/helpPage.png" },
-    { id: "control", src: "./Assets/images/controlPage.png" },
-    { id: "bg", src: "./Assets/images/gameBG.png" },
-    { id: "level2", src: "./Assets/images/ocean2.png" },
-    { id: "level3", src: "./Assets/images/ocean3.png" },
-    { id: "engine", src: "./Assets/audio/engine.mp3" },
-    { id: "coin", src: "./Assets/audio/coin.wav" },
-    { id: "life", src: "./Assets/audio/life.wav" },
-    { id: "explosion", src: "./Assets/audio/explosion.mp3" },
-    { id: "bulletSound", src: "./Assets/audio/bullet.mp3" },
-    { id: "button", src: "./Assets/audio/button.mp3" },
-    { id: "bulletOpen", src: "./Assets/audio/buttonOpen.mp3" },
-    { id: "bossEntry", src: "./Assets/audio/bossEntry.mp3" },
-    { id: "victory", src: "./Assets/audio/victory.mp3" }
+    { id: "textureAtlas", src: "Assets/sprites/textureAtlas.png" },
+    { id: "ocean", src: "Assets/images/ocean.png" },
+    { id: "help", src: "Assets/images/helpPage.png" },
+    { id: "control", src: "Assets/images/controlPage.png" },
+    { id: "bg", src: "Assets/images/gameBG.png" },
+    { id: "level2", src: "Assets/images/ocean2.png" },
+    { id: "level3", src: "Assets/images/ocean3.png" },
+    { id: "engine", src: "Assets/audio/engine.mp3" },
+    { id: "coin", src: "Assets/audio/coin.wav" },
+    { id: "life", src: "Assets/audio/life.wav" },
+    { id: "explosion", src: "Assets/audio/explosion.mp3" },
+    { id: "bulletSound", src: "Assets/audio/bullet.mp3" },
+    { id: "button", src: "Assets/audio/button.mp3" },
+    { id: "bulletOpen", src: "Assets/audio/buttonOpen.mp3" },
+    { id: "bossEntry", src: "Assets/audio/bossEntry.mp3" },
+    { id: "victory", src: "Assets/audio/victory.mp3" }
   ];
 
   // preloads assets
