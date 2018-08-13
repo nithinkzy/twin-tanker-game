@@ -181,6 +181,22 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
+            <key type="filename">../images/boss1.png</key>
+            <key type="filename">../images/boss2.png</key>
+            <key type="filename">../images/boss3.png</key>
+            <key type="filename">../images/boss4.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>25,23,50,45</rect>
+                <key>scale9Paddings</key>
+                <rect>25,23,50,45</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">../images/bullet.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
@@ -229,21 +245,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../images/enemy1.png</key>
-            <key type="filename">../images/enemy2.png</key>
-            <key type="filename">../images/enemy3.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>23,19,47,37</rect>
-                <key>scale9Paddings</key>
-                <rect>23,19,47,37</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
+            <key type="filename">../images/controlButton.png</key>
             <key type="filename">../images/exitButton.png</key>
             <key type="filename">../images/helpButton.png</key>
             <key type="filename">../images/levelOneButton.png</key>
@@ -262,6 +264,22 @@
                 <rect>50,15,100,30</rect>
                 <key>scale9Paddings</key>
                 <rect>50,15,100,30</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../images/enemy1.png</key>
+            <key type="filename">../images/enemy2.png</key>
+            <key type="filename">../images/enemy3.png</key>
+            <key type="filename">../images/enemy4.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>23,19,47,37</rect>
+                <key>scale9Paddings</key>
+                <rect>23,19,47,37</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
@@ -364,6 +382,12 @@
             <filename>../images/levelOneButton.png</filename>
             <filename>../images/levelThreeButton.png</filename>
             <filename>../images/levelTwoButton.png</filename>
+            <filename>../images/enemy4.png</filename>
+            <filename>../images/boss1.png</filename>
+            <filename>../images/boss2.png</filename>
+            <filename>../images/boss3.png</filename>
+            <filename>../images/boss4.png</filename>
+            <filename>../images/controlButton.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
